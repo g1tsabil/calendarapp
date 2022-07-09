@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar App</title>
+    <script type="text/javascript" src="calendar.js"></script>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+
+<body onload="allocateSlots();allocateDates();allocateYear();allocateButton();clear();">
+
+    <h1>CALENDAR APP</h1>
+
+    <div id="dates" class="calendarpos">
+        <!-- <table id="dates"> -->
+        <table>
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </table>
+
+        <div class="reminder">
+            <form id="remind">
+                <br><br>
+                <label style="margin-left:80px;margin-top:50px;font-weight:bold;">Select Date and Time:</label>
+                <input id="dateTimeReminder" type="datetime-local" name="remindTimeDate" style="width:350px;font-size:20px;">
+                <br><br><br><br>
+                <label style="margin-left:118px;margin-top:50px;font-weight:bold;">Alert Offset(hour):</label>
+                <input id="offset" type="text" name="offset" style="width:350px;height:20px;font-size:20px;">
+                <br><br><br><br>
+                <label style="margin-left:118px;margin-top:50px;font-weight:bold;">Alert Offset(mins):</label>
+                <input id="offset2" type="text" name="offset2" style="width:350px;height:20px;font-size:20px;">
+                <br><br><br><br>
+                <label style="margin-left:156px;margin-top:50px;font-weight:bold;">Reminder Note:</label>
+                <input id="noteReminder" type="text" name="remindNote" style="width:350px;height:20px;font-size:20px;">
+                <br><br><br>
+                <input type="button" style="font-size:20px;margin-left:310px;" value="ADD REMINDER" onclick="addEvent();">
+            </form>
+        </div>
+
+        <div class="noteList">
+            <label style="margin-left:130px;margin-top:50px;font-weight:bold;">REMINDERS</label>
+            <br><br><br>
+            <ul id="reminderList" style="max-height:300px;max-width:350px;overflow-y:scroll;margin-left:20px;">
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
